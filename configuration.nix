@@ -129,13 +129,12 @@
     extraPortals = [ pkgs.xdg-desktop-portal-wlr ];
   };
 
-
 #==CONFIGURACION-DEL-USUARIO
   # Define el Usuario
   users.users."antsoftware21" = {
     isNormalUser = true;
     description = "Antsoftware21";
-    extraGroups = [ "networkmanager" "wheel" "libvirtd" "kvm" "podman" "adbusers" ];
+    extraGroups = [ "networkmanager" "wheel" "seat" "libvirtd" "kvm" "podman" "adbusers" ];
     shell = pkgs.fish;
 
   # Rangos de subUID y subGID para contenedores rootless
@@ -190,7 +189,7 @@
     # Entorno :
     rofi rofi-power-menu waybar swayidle swaylock-effects nwg-look
     pulsemixer bluetuith nemo engrampa zip unzip eom xdg-user-dirs 
-    xdg-desktop-portal
+    xdg-desktop-portal 
 
     # Temas :  
     papirus-icon-theme graphite-cursors tokyonight-gtk-theme
